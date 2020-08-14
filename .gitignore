@@ -3,3 +3,4 @@ fastq
 bam
 genome
 *.log
+.Rproj.user
