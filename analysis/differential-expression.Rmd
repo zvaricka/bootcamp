@@ -1,0 +1,173 @@
+---
+title: "Differential expression analysis"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+## Setup
+
+Load packages.
+
+```{r packages}
+library(limma)
+library(edgeR)
+```
+
+Import counts.
+
+```{r import}
+rawData <- read.table("~/scratch/bootcamp/data/counts.txt",
+                      header = TRUE,
+                      stringsAsFactors = FALSE)
+dim(rawData)
+genes <- subset(rawData, select = Geneid:Length)
+counts <- rawData[, 7:18]
+rownames(counts) <- genes$Geneid
+colnames(counts) <- gsub("\\.*bam\\.*", "", colnames(counts))
+group <- c(rep("mutant", 6), rep("wildtype", 6))
+group <- factor(group, levels = c("wildtype", "mutant"))
+x <- DGEList(counts = counts,
+             group = group,
+             genes = genes)
+class(x)
+```
+
+## Process features
+
+<!-- Ex 1: log2CPM -->
+
+Calculate log2 counts per million (log2cpm).
+
+```{r cpm}
+log2cpm <- ___(x, log = ___)
+```
+
+Plot density of expression values for each sample.
+
+```{r plotDensities}
+___(___, group = group, main = "Raw")
+```
+
+<!-- Ex 2: Filter -->
+
+Only keep features which have at least 10 counts in at least 4 wildtype or 4
+mutant samples.
+
+```{r keep}
+keep <- ___(x, group = group)
+sum(keep)
+x <- x[___, ]
+```
+
+Re-calculate log2cpm and re-plot densities.
+
+```{r plotDensitiesFiltered}
+log2cpm <- ___(x, log = ___)
+___(___, group = group, main = "Filtered")
+```
+
+<!-- Ex 3: Normalize -->
+
+Normalize the samples, re-calculate log2cpm, and re-plot densities.
+
+```{r normalize}
+x <- ___(x)
+log2cpm <- ___(x, log = ___)
+___(___, group = group, main = "Normalized")
+```
+
+## Process samples
+
+<!-- Ex 1: SNF2 -->
+
+Confirm that the mutant samples are null for SNF2.
+
+```{r snf2}
+___(log2cpm["___", ], main = "SNF2")
+```
+
+<!-- Ex 2: PCA -->
+
+Perform PCA.
+
+```{r pca}
+___(___, gene.selection = "common")
+```
+
+Remove outlier sample.
+
+```{r}
+x <- x[, colnames(x) != "___"]
+dim(x)
+```
+
+<!-- Ex 3: PCA 2 -->
+
+Re-calculate log2cpm and re-perform PCA.
+
+```{r pca2}
+log2cpm <- ___(x, log = ___)
+___(___, gene.selection = "common")
+```
+
+## Model
+
+$$ Y = \beta_{0} + \beta_{mutant} + \epsilon $$
+
+```{r design}
+design <- model.matrix(~x$samples$group)
+```
+
+```{r voom}
+v <- voom(x, design, plot = TRUE)
+```
+
+```{r fit}
+fit <- lmFit(v, design)
+fit <- eBayes(fit)
+```
+
+## Explore results
+
+<!-- Ex 1: topTable -->
+
+Count number of differentially expressed features.
+
+```{r number-of-de-genes}
+summary(___(fit))
+```
+
+View top 10 differentially expressed genes.
+
+```{r}
+___(fit, coef = ___)
+```
+
+Create a barplot of the top DE feature:
+
+```{r}
+___(log2cpm["___", ], las = 2, cex.names = 0.75)
+```
+
+<!-- Ex 2: assessment -->
+
+Visualize p-value distribution.
+
+```{r p-values}
+___(fit$p.value[, 2], main = "p-value distribution")
+```
+
+Visualize residual variation versus magnitude of expression.
+
+```{r residuals}
+___(fit)
+```
+
+<!-- Ex 3: volcano -->
+
+Create a volcano plot.
+
+```{r volcano}
+___(fit, coef = ___, highlight = 5, names = fit$genes$Geneid)
+```

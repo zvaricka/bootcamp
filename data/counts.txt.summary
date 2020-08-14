@@ -1,0 +1,15 @@
+Status	bam/mutant-01.bam	bam/mutant-02.bam	bam/mutant-03.bam	bam/mutant-04.bam	bam/mutant-05.bam	bam/mutant-06.bam	bam/wildtype-01.bam	bam/wildtype-02.bam	bam/wildtype-03.bam	bam/wildtype-04.bam	bam/wildtype-05.bam	bam/wildtype-06.bam
+Assigned	1486668	1274906	1262822	1556280	1006764	1243534	873631	1153393	934565	1519472	1167242	2118737
+Unassigned_Unmapped	201604	179757	190092	221094	241451	153346	143781	180903	178928	243866	216064	353414
+Unassigned_Read_Type	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Singleton	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_MappingQuality	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_MultiMapping	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Secondary	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_NonSplit	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_NoFeatures	187413	130970	133627	189748	116185	182151	70834	125268	108510	153394	121170	227822
+Unassigned_Overlapping_Length	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Ambiguity	9645	8527	8154	10131	7425	8926	5711	8005	6204	10123	9017	12861
