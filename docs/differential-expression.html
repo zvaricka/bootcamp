@@ -492,16 +492,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzvarickabootcamptreeee78f5cb6afb1e03b5c0dee38ca19e9f9bedc864targetblankee78f5ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/zvaricka/bootcamp/tree/ee78f5cb6afb1e03b5c0dee38ca19e9f9bedc864" target="_blank">ee78f5c</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzvarickabootcamptreee4af1b42f7ca41466380fe37e6ab09c6c89e1ed7targetblanke4af1b4a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/zvaricka/bootcamp/tree/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7" target="_blank">e4af1b4</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomzvarickabootcamptreeee78f5cb6afb1e03b5c0dee38ca19e9f9bedc864targetblankee78f5ca" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomzvarickabootcamptreee4af1b42f7ca41466380fe37e6ab09c6c89e1ed7targetblanke4af1b4a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/zvaricka/bootcamp/tree/ee78f5cb6afb1e03b5c0dee38ca19e9f9bedc864" target="_blank">ee78f5c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/zvaricka/bootcamp/tree/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7" target="_blank">e4af1b4</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -551,6 +551,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zvaricka/bootcamp/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/differential-expression.html" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -625,6 +642,43 @@ attr(,&quot;package&quot;)
 <p>Plot density of expression values for each sample.</p>
 <pre class="r"><code>plotDensities(log2cpm, group = group, main = &quot;Raw&quot;)</code></pre>
 <p><img src="figure/differential-expression.Rmd/plotDensities-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plotDensities-1">
+Past versions of plotDensities-1.png
+</button>
+</p>
+<div id="fig-plotDensities-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/plotDensities-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <!-- Ex 2: Filter -->
 <p>Only keep features which have at least 10 counts in at least 4 wildtype or 4 mutant samples.</p>
 <pre class="r"><code>keep &lt;- filterByExpr(x, group = group)
@@ -635,12 +689,86 @@ sum(keep)</code></pre>
 <pre class="r"><code>log2cpm &lt;- cpm(x, log = TRUE)
 plotDensities(log2cpm, group = group, main = &quot;Filtered&quot;)</code></pre>
 <p><img src="figure/differential-expression.Rmd/plotDensitiesFiltered-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plotDensitiesFiltered-1">
+Past versions of plotDensitiesFiltered-1.png
+</button>
+</p>
+<div id="fig-plotDensitiesFiltered-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/plotDensitiesFiltered-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <!-- Ex 3: Normalize -->
 <p>Normalize the samples, re-calculate log2cpm, and re-plot densities.</p>
 <pre class="r"><code>x &lt;- calcNormFactors(x)
 log2cpm &lt;- cpm(x, log = TRUE)
 plotDensities(log2cpm, group = group, main = &quot;Normalized&quot;)</code></pre>
 <p><img src="figure/differential-expression.Rmd/normalize-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-normalize-1">
+Past versions of normalize-1.png
+</button>
+</p>
+<div id="fig-normalize-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/normalize-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="process-samples" class="section level2">
 <h2>Process samples</h2>
@@ -648,10 +776,84 @@ plotDensities(log2cpm, group = group, main = &quot;Normalized&quot;)</code></pre
 <p>Confirm that the mutant samples are null for SNF2.</p>
 <pre class="r"><code>barplot(log2cpm[&quot;YOR290C&quot;, ], main = &quot;SNF2&quot;)</code></pre>
 <p><img src="figure/differential-expression.Rmd/snf2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-snf2-1">
+Past versions of snf2-1.png
+</button>
+</p>
+<div id="fig-snf2-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/snf2-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <!-- Ex 2: PCA -->
 <p>Perform PCA.</p>
 <pre class="r"><code>plotMDS(log2cpm, gene.selection = &quot;common&quot;)</code></pre>
 <p><img src="figure/differential-expression.Rmd/pca-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pca-1">
+Past versions of pca-1.png
+</button>
+</p>
+<div id="fig-pca-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/pca-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Remove outlier sample.</p>
 <pre class="r"><code>x &lt;- x[, colnames(x) != &quot;mutant.06&quot;]
 dim(x)</code></pre>
@@ -661,6 +863,43 @@ dim(x)</code></pre>
 <pre class="r"><code>log2cpm &lt;- cpm(x, log = TRUE)
 plotMDS(log2cpm, gene.selection = &quot;common&quot;)</code></pre>
 <p><img src="figure/differential-expression.Rmd/pca2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pca2-1">
+Past versions of pca2-1.png
+</button>
+</p>
+<div id="fig-pca2-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/pca2-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="model" class="section level2">
 <h2>Model</h2>
@@ -668,6 +907,43 @@ plotMDS(log2cpm, gene.selection = &quot;common&quot;)</code></pre>
 <pre class="r"><code>design &lt;- model.matrix(~x$samples$group)</code></pre>
 <pre class="r"><code>v &lt;- voom(x, design, plot = TRUE)</code></pre>
 <p><img src="figure/differential-expression.Rmd/voom-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-voom-1">
+Past versions of voom-1.png
+</button>
+</p>
+<div id="fig-voom-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/voom-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>fit &lt;- lmFit(v, design)
 fit &lt;- eBayes(fit)</code></pre>
 </div>
@@ -707,17 +983,165 @@ YOR273C 1.124107e-13 5.011473e-11 21.69191</code></pre>
 <p>Create a barplot of the top DE feature:</p>
 <pre class="r"><code>barplot(log2cpm[&quot;YML123C&quot;, ], las = 2, cex.names = 0.75)</code></pre>
 <p><img src="figure/differential-expression.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-3-1">
+Past versions of unnamed-chunk-3-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-3-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/unnamed-chunk-3-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <!-- Ex 2: assessment -->
 <p>Visualize p-value distribution.</p>
 <pre class="r"><code>hist(fit$p.value[, 2], main = &quot;p-value distribution&quot;)</code></pre>
 <p><img src="figure/differential-expression.Rmd/p-values-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-p-values-1">
+Past versions of p-values-1.png
+</button>
+</p>
+<div id="fig-p-values-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/p-values-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Visualize residual variation versus magnitude of expression.</p>
 <pre class="r"><code>plotSA(fit)</code></pre>
 <p><img src="figure/differential-expression.Rmd/residuals-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-residuals-1">
+Past versions of residuals-1.png
+</button>
+</p>
+<div id="fig-residuals-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/residuals-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <!-- Ex 3: volcano -->
 <p>Create a volcano plot.</p>
 <pre class="r"><code>volcanoplot(fit, coef = 2, highlight = 5, names = fit$genes$Geneid)</code></pre>
 <p><img src="figure/differential-expression.Rmd/volcano-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-volcano-1">
+Past versions of volcano-1.png
+</button>
+</p>
+<div id="fig-volcano-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/zvaricka/bootcamp/blob/e4af1b42f7ca41466380fe37e6ab09c6c89e1ed7/docs/figure/differential-expression.Rmd/volcano-1.png" target="_blank">e4af1b4</a>
+</td>
+<td>
+Allison Zvarick
+</td>
+<td>
+2020-08-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
